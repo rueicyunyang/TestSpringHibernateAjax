@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<!-- 設定要和表格對應的類別名稱 -->
+   <class name="com.test.bean.Continent">
+        <!-- 設定類別內會對應到主鍵的屬性 -->
+        <id name="continentId" type="java.lang.Integer">
+            <!--設定對應的表格欄位-->
+            <column name="CONTINENT_ID"/>
+            <generator class="sequence">
+                <param name="sequence">continent_id_seq</param>
+            </generator>
+        </id>
+        <property name="continentName" type="java.lang.String">
+        	<column name="CONTINENT_NAME" length="15" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
